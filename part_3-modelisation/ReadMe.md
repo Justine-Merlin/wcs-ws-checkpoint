@@ -82,16 +82,16 @@ Il était aussi possible d'avoir deux entités **Candidate** et **Recruiter** di
 
 Toutes les offres d'emploi :
 
-![toutes les offres](all_offers.jpg)
+![toutes les offres](./requests/all_offers.jpg)
 
 Toutes les offres d'emploi d'une ville (Paris) :
 
-![toutes les offres par ville](all_offers_filtered_by_city.jpg)
+![toutes les offres par ville](./requests/all_offers_filtered_by_city.jpg)
 
 Les informations de tous candidats qui ont postulé à une offre précise :
 
-![tous les candidats pour une offre](all_candidates_filtered_by_offer.jpg)
+![tous les candidats pour une offre](./requests/all_candidates_filtered_by_offer.jpg)
 
 Les informations de tous les candidats qui ont postulé aux offres d'une entreprise :
 
-![touts les candidats pour toutes les offres d'une entreprise](all_candidates_filtered_by_company_offers.jpg)
+![touts les candidats pour toutes les offres d'une entreprise](./requests/all_candidates_filtered_by_company_offers.jpg)
