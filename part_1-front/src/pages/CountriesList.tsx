@@ -2,6 +2,7 @@ import { useQuery } from "@apollo/client";
 import { Link, useParams } from "react-router-dom";
 import { COUNTRIES_QUERY } from "../graphql/gql";
 import { ICountry } from "../types/interfaces";
+import Navigation from "../components/Navigation";
 
 const CountriesList = () => {
 	const { continent } = useParams();
@@ -14,7 +15,8 @@ const CountriesList = () => {
 
 	if (loading) return <h2>Data is loading ...</h2>;
 	return (
-		<main>
+		<main className="max-w-[1000px] mx-auto">
+			<Navigation continentName={data.continent.name} />
 			<ul className="p-6 flex flex-wrap gap-8 justify-center">
 				{data.continent.countries.map((country: ICountry) => (
 					<li

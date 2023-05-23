@@ -47,6 +47,9 @@ export const COUNTRY_QUERY = gql`
 				name
 				code
 			}
+			continent {
+				name
+			}
 		}
 	}
 `;

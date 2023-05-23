@@ -3,13 +3,15 @@ import { Link } from "react-router-dom";
 import { CONTINENTS_QUERY } from "../graphql/gql";
 import { IContinent } from "../types/interfaces";
 import { colorPerContinent } from "../utils/colors";
+import Navigation from "../components/Navigation";
 
 const ContinentsList = () => {
 	const { loading, data } = useQuery(CONTINENTS_QUERY);
 
 	if (loading) return <h2>Data is loading ...</h2>;
 	return (
-		<main>
+		<main className="max-w-[1000px] mx-auto">
+			<Navigation />
 			<ul className="p-6 flex flex-wrap gap-8 justify-center">
 				{data.continents.map((continent: IContinent) => (
 					<li
