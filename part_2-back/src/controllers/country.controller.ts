@@ -1,10 +1,22 @@
 import { dataSource } from "../lib/datasource";
-import { Country, CountryInput } from "../models/Country.model";
+import {
+	Country,
+	CountryCodeInput,
+	CountryInput,
+} from "../models/Country.model";
 
 const countries = dataSource.getRepository(Country);
 
-const getCountries = async () => {
+const getCountries = async (): Promise<Country[]> => {
 	return await countries.find();
+};
+
+const getCountry = async ({ code }: CountryCodeInput): Promise<Country[]> => {
+	return await countries.find({
+		where: {
+			code,
+		},
+	});
 };
 
 const addCountry = async (country: CountryInput): Promise<Country> => {
@@ -12,4 +24,4 @@ const addCountry = async (country: CountryInput): Promise<Country> => {
 	return newCountry;
 };
 
-export default { getCountries, addCountry };
+export default { getCountry, getCountries, addCountry };

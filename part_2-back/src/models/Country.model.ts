@@ -14,6 +14,10 @@ export class Country {
 
 	@Field()
 	@Column()
+	code: string;
+
+	@Field()
+	@Column()
 	emoji: string;
 }
 
@@ -23,5 +27,14 @@ export class CountryInput {
 	name: string;
 
 	@Field()
+	code: string;
+
+	@Field()
 	emoji: string;
+}
+
+@InputType()
+export class CountryCodeInput {
+	@Field()
+	code: string;
 }
