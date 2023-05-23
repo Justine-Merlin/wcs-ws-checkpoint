@@ -4,10 +4,11 @@ import { startStandaloneServer } from "@apollo/server/standalone";
 import { buildSchema } from "type-graphql";
 import { CountryResolver } from "./resolvers/Country.resolver";
 import { dataSource } from "./lib/datasource";
+import { ContinentResolver } from "./resolvers/Continent.resolver";
 
 const startApolloServer = async () => {
 	const schema = await buildSchema({
-		resolvers: [CountryResolver],
+		resolvers: [CountryResolver, ContinentResolver],
 	});
 
 	const server = new ApolloServer({
