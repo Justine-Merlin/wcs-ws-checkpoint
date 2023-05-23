@@ -15,7 +15,7 @@ export interface ICountry {
 	languages: ILanguage[];
 }
 
-interface ILanguage {
+export interface ILanguage {
 	name: string;
 	code: string;
 }

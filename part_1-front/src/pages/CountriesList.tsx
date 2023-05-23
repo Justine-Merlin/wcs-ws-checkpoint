@@ -11,7 +11,6 @@ const CountriesList = () => {
 			code: continent,
 		},
 	});
-	console.log(data);
 
 	if (loading) return <h2>Data is loading ...</h2>;
 	return (
@@ -24,21 +23,14 @@ const CountriesList = () => {
 					>
 						<Link
 							to={`/continents/${continent}/country/${country.code}`}
-							className="block py-8 px-10"
+							className="block py-8 px-10 hover:bg-orange-50 transition-all"
 						>
 							<p
 								role="img"
 								aria-label="emoji"
 							>
-								{String.fromCodePoint(
-									parseInt(
-										country.emojiU
-											.substring(0, country.emojiU.indexOf(" "))
-											.replace(/U\+1/i, "0x"),
-									),
-								)}
+								{country.emoji}
 							</p>
-
 							{country.name}
 						</Link>
 					</li>

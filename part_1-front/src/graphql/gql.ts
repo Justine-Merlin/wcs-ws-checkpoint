@@ -31,3 +31,22 @@ export const COUNTRIES_QUERY = gql`
 		}
 	}
 `;
+
+export const COUNTRY_QUERY = gql`
+	query CountrY($code: ID!) {
+		country(code: $code) {
+			name
+			code
+			native
+			phone
+			capital
+			currency
+			emoji
+			emojiU
+			languages {
+				name
+				code
+			}
+		}
+	}
+`;
