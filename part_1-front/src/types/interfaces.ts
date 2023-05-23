@@ -17,5 +17,5 @@ export interface ICountry {
 
 export interface ILanguage {
 	name: string;
-	code: string;
+	code?: string;
 }
