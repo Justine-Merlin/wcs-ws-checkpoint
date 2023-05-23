@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import ContinentsList from "./pages/ContinentsList";
+import CountriesList from "./pages/CountriesList";
 
 function App() {
 	return (
@@ -15,8 +16,12 @@ function App() {
 						element={<ContinentsList />}
 					/>
 					<Route
-						path="/:continent"
-						element={<p>continent page</p>}
+						path="/continents/:continent"
+						element={<CountriesList />}
+					/>
+					<Route
+						path="/continents/:continent/country/:country"
+						element={<p>Country Page</p>}
 					/>
 				</Route>
 			</Routes>
